@@ -1,0 +1,13 @@
+global-styling:
+  css:
+    theme:
+      dist/build.css: {}
+  js:
+    dist/main.js: { attributes: { type: 'module'}}
+  dependencies:
+    - core/jquery
+
+hot-module-replacement:
+  header: true
+  js:
+    dist/_snowpack/hmr-client.js: { attributes: { type: 'module'}}
