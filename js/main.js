@@ -1,21 +1,29 @@
 import {createApp} from 'vue/dist/vue.esm-bundler.js'
 import App from './App.vue'
+import SFCInstance from './SFCInstance.vue'
 import $ from 'jquery'
 
-// Vue Single Instance.
+// Vue Inline Instance.
 const customApp = {
   data() {
     return {
-      message: "Learn Vue"
+      message: "Rendered!"
     }
   },
   mounted () {
     console.log('mounted')
   },
 }
-const customTags = document.querySelectorAll('.custom')
-for (const customTag of customTags) {
-  createApp(customApp).mount(customTag)
+const instanceTags = document.querySelectorAll('.v-instance')
+for (const instance of instanceTags) {
+  createApp({...customApp}).mount(instance)
+}
+
+
+// Vue Multiple SFC instances
+const sfcTags = document.querySelectorAll('.sfc-instance')
+for (const instance of sfcTags) {
+  createApp(SFCInstance).mount(instance)
 }
 
 
@@ -24,5 +32,5 @@ const app = createApp(App)
 app.mount('#app')
 
 
-// Jquery 
+// Jquery
 console.log($('body'))

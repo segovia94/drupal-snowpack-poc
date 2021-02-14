@@ -1,0 +1,23 @@
+<?php
+
+use Drupal\Core\Site\Settings;
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function snow_page_attachments_alter(array &$attachments) {
+  $local = Settings::get('hot_module_replacement');
+
+  if ($local) {
+    $attachments['#attached']['html_head'][] = [
+      [
+        '#tag' => 'script',
+        '#value' => "window.HMR_WEBSOCKET_URL = 'ws://localhost:12321'",
+      ],
+      'hmr',
+    ];
+
+    $attachments['#attached']['library'][] = 'snow/hot-module-replacement';
+  }
+
+}

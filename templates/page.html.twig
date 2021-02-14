@@ -1,21 +1,28 @@
 <div>
-  <p>Custom Instance</p>
-  <div class="custom">
-    Inside
+  <h1>Snowpack Demo</h1>
+  <p>This page is being hijacked specifically to show local development via:
+    <a href="https://www.snowpack.dev/">https://www.snowpack.dev/</a></p>
+
+  <h2>Inline Vue Instance</h2>
+  <div class="v-instance">
+    Instance 1 -
     {% verbatim %}
-      Test this {{message}}
+      Test 1: {{message}}
     {% endverbatim %}
   </div>
 
-  <div class="custom">
-    Inside
+  <div class="v-instance">
+    Instance 2 -
     {% verbatim %}
-      Test this {{message}}
+      Test 2: {{message}}
     {% endverbatim %}
   </div>
 
-  <p>Vue SFC</p>
+  <h2>Multiple Vue SFC instances</h2>
+  <div class="sfc-instance">SFC Instance 1 - Not Rendered</div>
+  <div class="sfc-instance">SFC Instance 2 - Not Rendered</div>
+
+  <h2>Single Vue SFC</h2>
   <div id="app"></div>
-
 
 </div>

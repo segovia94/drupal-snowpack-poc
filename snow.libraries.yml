@@ -1,7 +1,7 @@
 global-styling:
   css:
     theme:
-      dist/build.css: {}
+      dist/styles.css: {}
   js:
     dist/main.js: { attributes: { type: 'module'}}
   dependencies:
