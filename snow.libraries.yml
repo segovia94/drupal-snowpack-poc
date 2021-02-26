@@ -6,6 +6,7 @@ global-styling:
     dist/main.js: { attributes: { type: 'module'}}
   dependencies:
     - core/jquery
+    - core/drupalSettings
 
 hot-module-replacement:
   header: true

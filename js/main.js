@@ -32,5 +32,12 @@ const app = createApp(App)
 app.mount('#app')
 
 
+;(async () => {
+  await setTimeout(() => {
+    console.log('5 seconds')
+  }, 5000)
+})();
+
+
 // Jquery
 console.log($('body'))

@@ -22,5 +22,13 @@ module.exports = {
   },
   buildOptions: {
     out: 'dist'
-  }
+  },
+  optimize: {
+    entrypoints: [
+      'main.js'
+    ],
+    minify: true,
+    target: 'es2018',
+    // bundle: true,
+  },
 };
